@@ -1,0 +1,100 @@
+/* styles.css */
+
+body {
+	margin: 0; /* Remove default margin */
+	background-color: #f2f0ef; /* Same colour as graphs */
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Fill the container while maintaining aspect ratio */
+}
+
+.container {
+    text-align: center;
+    font-family: Arial;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.container .title {
+    font-size: clamp(16px, 5vw, 36px);
+    font-weight: bold;
+
+    color: #333333;
+    margin-top: 20px; 
+}
+
+.container .credit {
+    font-size: clamp(12px, 4vw, 26px);
+    font-weight: bold;
+
+    color: #4d4d4e;
+    margin-top: 10px; 
+}
+
+
+.flag-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f0ef;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+.flag-button:hover {
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    
+    }
+    
+.flag-button img {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+        
+    }
+
+.image-container {
+    margin-top: 20px;
+    position: relative;
+}
+
+#selectedImage {
+	width: 100%; /* Set width to 100% of the container */
+	height: auto; /* Maintain aspect ratio */
+    display: none; /* Hidden by default */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.zoom-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    display: none; /* Hidden by default */
+}
+
+.zoom-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #f2f0ef;
+}
+
+.zoom-img:hover {
+    transform: scale(1.1);
+}

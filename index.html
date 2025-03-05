@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>US Presidential Approval</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!--
+    <img src='us_presidential_approval.png' alt='Plot of US Presidential Approval'>
+    -->
+    
+    <div class='container'>
+        <h1 class='title'>US Presidential Approval Tracker</h1>
+        <h2 class = 'credit'>Created by Maciej Anielski</h2>
+        
+        <button class = 'flag-button' id = 'ukbutton' onclick = 'changeUKButton()'>
+            <img src = 'assets/united_kingdom_flag.svg' alt = 'United Kingdom Flag'> UK Voting Intention
+        </button>
+        
+        <button class = 'flag-button' id = 'usbutton' onclick = 'changeUSButton()'>
+            <img src = 'assets/united_states_flag.svg' alt = 'United States Flag'> US Presidential Approval
+        </button>
+        
+        <div class='image-container'>
+            <img id='selectedImage' src='' alt=''>
+             <button id='zoomButton' class='zoom-button'>
+                <img id='zoomIcon' src='assets/zoom_icon.svg' alt='Zoom' class='zoom-img'>
+            </button>
+        </div>
+        
+    </div>
+
+    <script src='script.js'></script>
+    
+</body>
+</html>
