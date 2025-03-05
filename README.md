@@ -1,7 +1,5 @@
 # Data Visualisation Website
 
-## Aim
-
 The goal here is to provide a space for my data visualisation projects.
 
 Right now this includes:
