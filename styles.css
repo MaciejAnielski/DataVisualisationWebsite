@@ -37,13 +37,12 @@ img {
 
 .flag-button {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
     cursor: pointer;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    background-color: #f2f0ef;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: none;
+    padding: 0;
+    background-color: rgba(0,0,0,0.0);
+    align-items: center;
+    justify-content: center;
     }
     
 .flag-button:hover {
@@ -56,13 +55,13 @@ img {
     height: 30px;
     width: auto;
     vertical-align: middle;
-    margin-right: 10px;
-        
+    box-shadow: none;    
     }
 
 .image-container {
     margin-top: 20px;
     position: relative;
+    object-fit: contain;
 }
 
 #selectedImage {
@@ -75,8 +74,8 @@ img {
 
 .zoom-button {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2%;
+    right: 1%;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     cursor: pointer;
@@ -88,13 +87,9 @@ img {
 }
 
 .zoom-img {
-    width: 24px;
-    height: 24px;
+    width: clamp(24px, 5vw, 24px);
+    height: auto;
     object-fit: contain;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background-color: #f2f0ef;
-}
-
-.zoom-img:hover {
-    transform: scale(1.1);
 }

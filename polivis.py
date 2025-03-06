@@ -371,15 +371,23 @@ class UKVotingIntentionProcessor:
             
             print(f'For {year} GE Polls: {date_conversion_fail} out of {date_total} failed.')
             
-    def plot_voting_intention(self, election_year, save_plot = True):
+    def plot_voting_intention(self, ukvi_data, election_year, save_plot = True):
     
         def select_columns(df, columns_list = ['end_date', 'Lab', 'Con', 'Lib', 'Ref', 'UKIP']):
             
             return df.filter(items=columns_list)
         
-        self.election_years = self.clean_wiki_tables()
+        self.election_years = ukvi_data
         
         if isinstance(election_year, list):
+            
+            if len(election_year) > 1:
+            
+                plot_suffix = f'{election_year[0]}_{election_year[-1]}'
+                
+            else:
+                
+                plot_suffix = f'{election_year[0]}'
             
             plot_data = pd.DataFrame()
             
@@ -388,6 +396,8 @@ class UKVotingIntentionProcessor:
                 plot_data = pd.concat([plot_data, self.election_years[year]['voting_intention']], ignore_index = True) 
                 
         else:
+            
+            plot_suffix = f'{election_year}'
             
             plot_data = self.election_years[election_year]['voting_intention']
         
@@ -452,7 +462,7 @@ class UKVotingIntentionProcessor:
         
         plt.legend(frameon = False, framealpha = 0.0)
         
-        # plt.ylim(-30,30)
+        plt.ylim(0,60)
         
         # plt.xticks(pd.date_range(start = min(plot_data['end_date']), end = max(plot_data['end_date']), freq = '1M'))
         
@@ -466,4 +476,6 @@ class UKVotingIntentionProcessor:
         
         plt.tight_layout()
         
-        plt.savefig(f'plots/uk_voting_intention.png', dpi=300, bbox_inches='tight')
+        
+        
+        plt.savefig(f'plots/uk_ge_voting_intention_{plot_suffix}.png', dpi=300, bbox_inches='tight')

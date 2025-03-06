@@ -11,7 +11,11 @@ CreateDirectory()
 # Create UK voting intention graphs.
 
 ukvi = UKVotingIntentionProcessor()
-ukvi.plot_voting_intention(election_year = ['next', '2024'])
+
+ukvi_data = ukvi.clean_wiki_tables()
+
+ukvi.plot_voting_intention(ukvi_data = ukvi_data, election_year = ['next'])
+ukvi.plot_voting_intention(ukvi_data = ukvi_data, election_year = ['next', '2024', '2019', '2017', '2015', '2010'])
 
 # Create US presidential approval graphs.
  

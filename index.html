@@ -4,33 +4,31 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>US Presidential Approval</title>
+    <title>Political Data Visualisations</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel='icon' href = 'page_icon.svg'>
 </head>
 <body>
     
-    <!--
-    <img src='us_presidential_approval.png' alt='Plot of US Presidential Approval'>
-    -->
-    
     <div class='container'>
-        <h1 class='title'>US Presidential Approval Tracker</h1>
+        <h1 class='title'>Political Data Visualisations</h1>
         <h2 class = 'credit'>Created by Maciej Anielski</h2>
         
         <button class = 'flag-button' id = 'ukbutton' onclick = 'changeUKButton()'>
-            <img src = 'assets/united_kingdom_flag.svg' alt = 'United Kingdom Flag'> UK Voting Intention
+            <img src = 'assets/united_kingdom_flag.svg' alt = 'United Kingdom Flag'>
         </button>
         
         <button class = 'flag-button' id = 'usbutton' onclick = 'changeUSButton()'>
-            <img src = 'assets/united_states_flag.svg' alt = 'United States Flag'> US Presidential Approval
+            <img src = 'assets/united_states_flag.svg' alt = 'United States Flag'>
         </button>
         
         <div class='image-container'>
             <img id='selectedImage' src='' alt=''>
-             <button id='zoomButton' class='zoom-button'>
-                <img id='zoomIcon' src='assets/zoom_icon.svg' alt='Zoom' class='zoom-img'>
-            </button>
         </div>
+        
+        <button id='zoomButton' class='zoom-button'>
+            <img id='zoomIcon' src='assets/zoom_icon.svg' alt='Zoom' class='zoom-img'>
+        </button>
         
     </div>
 

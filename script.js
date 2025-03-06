@@ -34,7 +34,7 @@ function changeImage() {
 function changeUKButton(){
 
     const image = document.getElementById('selectedImage');
-    image.src = 'plots/uk_voting_intention.png';
+    image.src = 'plots/uk_ge_voting_intention_next.png';
     image.alt = 'UK General Election Voting Intention';
     image.style.display = 'block';
     
@@ -48,7 +48,7 @@ function changeUSButton(){
 
     const image = document.getElementById('selectedImage');
     image.src = 'plots/us_presidential_net_approval_current_term.png';
-    image.alt = 'UK General Election Voting Intention';
+    image.alt = 'US Presidential Voting Intention';
     image.style.display = 'block';
     
     isZoomed = false;
@@ -62,6 +62,8 @@ let isZoomed = false;
 const zoomPairs = {
     'plots/us_presidential_net_approval_current_term.png': 'plots/us_presidential_net_approval_2017_present.png',
     'plots/us_presidential_net_approval_2017_present.png': 'plots/us_presidential_net_approval_current_term.png',
+    'plots/uk_ge_voting_intention_next.png': 'plots/uk_ge_voting_intention_next_2010.png',
+    'plots/uk_ge_voting_intention_next_2010.png': 'plots/uk_ge_voting_intention_next.png'
 };
 
 // Function to toggle zoom state
